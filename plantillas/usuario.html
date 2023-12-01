@@ -1,0 +1,118 @@
+<!DOCTYPE html>{% load static%}
+<html>
+
+<head>
+    <title>Norky's|Usuario</title>
+    <link rel="icon" type="image/png" href="{% static '/img/logo_head.png' %}">
+    <link href="{% static 'css/usuario.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/h_f.css' %}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="total">
+    <!--comienzo de la configuración de fondo-->
+    <div class="contain--configuracion">
+
+        <section class="configuracion">
+            <input type="file" class="file" accept="image/*">
+            <button class="btn-inter guardar">Guardar</button>
+            <button class="btn-inter confi-sal">Salir</button>
+        </section>
+    </div>
+    <!--fin de la configuración de fondo-->
+
+
+    <div class="user--contain">
+        <!--comienzo de la información del usuario-->
+        <section class="user--back ">
+            <a href="{% url ''%}" class=" btn--user">Salir</a>
+            <img alt="usuario" src="{% static 'img/usuario.png' %}" class="user--png">
+            <div class="text-align wave ">
+                <p>Anónimo</p>
+                <p>16/06/2021</p>
+                <button class="btn--user btn-confi">configurar</button>
+            </div>
+        </section>
+        <!--fin de la información del usuario-->
+        <!--comienzo del contenido de favoritos-->
+        <div class="user--column_flex">
+            <h1 class="text-align">FAVORITOS</h1>
+            <div class="contain--grid__2-3">
+                <section class="cuadro_info-container">
+                    <img class="cuadro_img" src="{%static 'img/brasa-completo.jpg' %}" alt="image">
+                    <p class="cuadro_info">1 pollo + papas + ensalada</p>
+                    <p>a solo:</p>
+                    <p class="font-precio">39.90</p>
+                    <button class="submit">comprar</button>
+                </section>
+                <section class="cuadro_info-container">
+                    <img class="cuadro_img" src="{%static 'img/brasa-completo.jpg' %}" alt="image">
+                    <p class="cuadro_info">1 pollo + papas + ensalada</p>
+                    <p>a solo:</p>
+                    <p class="font-precio">39.90</p>
+                    <button class="submit">comprar</button>
+                </section>
+                <section class="cuadro_info-container">
+                    <img class="cuadro_img" src="{%static 'img/brasa-completo.jpg' %}" alt="image">
+                    <p class="cuadro_info">1 pollo + papas + ensalada</p>
+                    <p>a solo:</p>
+                    <p class="font-precio">39.90</p>
+                    <button class="submit">comprar</button>
+                </section>
+                <section class="cuadro_info-container">
+                    <img class="cuadro_img" src="{%static 'img/brasa-completo.jpg' %}" alt="image">
+                    <p class="cuadro_info">1 pollo + papas + ensalada</p>
+                    <p>a solo:</p>
+                    <p class="font-precio">39.90</p>
+                    <button class="submit">comprar</button>
+                </section>
+                <section class="cuadro_info-container">
+                    <img class="cuadro_img" src="{%static 'img/brasa-completo.jpg' %}" alt="image">
+                    <p class="cuadro_info">1 pollo + papas + ensalada</p>
+                    <p>a solo:</p>
+                    <p class="font-precio">39.90</p>
+                    <button class="submit">comprar</button>
+                </section>
+                <section class="cuadro_info-container">
+                    <img class="cuadro_img" src="{%static 'img/brasa-completo.jpg' %}" alt="image">
+                    <p class="cuadro_info">1 pollo + papas + ensalada</p>
+                    <p>a solo:</p>
+                    <p class="font-precio">39.90</p>
+                    <button class="submit">comprar</button>
+                </section>
+            </div>
+            <!--fin del contenido de favoritos-->
+            <!--comienzo de botones de secciones-->
+            <div class="row">
+                <button class="btn-inter ">Anterior</button>
+                <button class="btn-inter ">Siguiente</button>
+            </div>
+            <div class="row">
+                <button class="category-section_btn">1</button>
+                <button class="category-section_btn">2</button>
+                <button class="category-section_btn">3</button>
+                <button class="category-section_btn">4</button>
+                <button class="category-section_btn">5</button>
+                <button class="category-section_btn">...</button>
+            </div>
+        </div>
+        <!--fin de botones de secciones-->
+        <!--comienzo de lista de ordenamiento-->
+        <div class="user--column_flex">
+            <div class="contain-list">
+                <h3 class="text-align">Lista de degustaciones</h3>
+                <ul>
+                    <li class="btn-list_user"><button class="btn-text btn-active btn-list_user">Todos</button></li>
+                    <li class="btn-list_user"><button class="btn-text btn-list_user">Postres</button></li>
+                    <li class="btn-list_user"><button class="btn-text btn-list_user">Comida</button></li>
+                    <li class="btn-list_user"><button class="btn-text btn-list_user">Bebidas</button></li>
+                    <li class="btn-list_user"><button class="btn-text btn-list_user">Promociones</button></li>
+                </ul>
+            </div>
+            <!--fin de lista de ordenamiento-->
+        </div>
+    </div>
+    <script src="{% static 'js/user.js' %}"></script>
+</body>
+
+</html>

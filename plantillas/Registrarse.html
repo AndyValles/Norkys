@@ -1,0 +1,78 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <title>Norky's|Registrarse</title>
+    <link rel="icon" type="image/png" href="{% static '/img/logo_head.png' %}">
+    <link href="{% static 'css/h_f.css' %}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/registrar.css' %}" type="text/css">
+</head>
+
+<body>
+    <a href="{% url '' %}" class="btn-a_salir">Salir</a>
+    <div class="regis--contain">
+        <img src="{% static 'img/fondo2.jpg' %}" class="regisrar--img">
+        <section class="regis--contain">
+            <!--Comienzo de la sección de formulario de registros-->
+            <div class="content_top-20">
+                <h1 class="text-align">Registrarse</h1>
+                <form>
+                    <p>Nombre:</p>
+                    <input type="text" class="regis_input">
+                    <p>Apellido:</p>
+                    <input type="text" class="regis_input">
+                    <p>Gmail:</p>
+                    <input type="email" class="regis_input">
+                    <p>Contraseña</p>
+                    <input type="password" class="regis_input">
+                    <p>Validar contraseña:</p>
+                    <input type="password" class="regis_input">
+                    <p>Celular:</p>
+                    <div>Cel:<select>
+                    <option value="">--</option>
+                    <option value="">+51</option>
+                </select> <input type="tel" class="regis--tel "></div>
+
+                    <p>Fecha de nacimiento:</p>
+                    <div>
+                        <select>
+                        <option>dia</option>
+                        </select><span>/</span>
+                        <select><option>mes</option></select><span>/</span>
+                        <select> <option>Año</option></select>
+                    </div>
+                    <p>Lugar de residencia:</p>
+                    <div>
+                        <select class="pais">
+                    <option>País</option>
+                    </select>
+                        <select>
+                    <option>Provincia</option>
+                    </select>
+                        <select>
+                    <option>Distrito</option>
+                    </select>
+                    </div>
+                    <p>Genero:</p>
+                    <div>
+                        <select class="reg_item">
+                    <option>---------------------</option>
+                    <option  >Femenino</option>
+                    <option > Masculino</option>
+                    <option > Otros</option>
+                     <option >Prefiero no decirlo</option>
+                    </select>
+                    </div>
+                    <input type="checkbox" id="check">
+                    <label for="check">Acepta los <button class="reference-animate btn-text "  href="">términos y condiciones</button></label>
+                    <button class="btn--enviar">Registrarse</button>
+                </form>
+            </div>
+        </section>
+        <!--fin de la sección de formulario de registros-->
+    </div>
+    <script></script>
+</body>
+
+</html>

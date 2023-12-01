@@ -1,0 +1,166 @@
+{% extends 'General.html' %}
+<!--/////////////////////-->
+{%block title%}Inicio{%endblock%}
+<!--////////////////////-->
+{%block link%} {% load static %}
+<link href="{%static '/css/home.css'%}" rel="stylesheet" type="text/css"> {%endblock%}
+<!--////////////////-->
+{%block content %}
+<!--Comienzo del cuadro amarillo-->
+<div class="content">
+    <div id="poligon"></div>
+</div>
+<!--Fin del cuadro amarillo-->
+<!--comienzo el contenido principal-->
+<div class="container content_plataform">
+    <!--Comienzo de la sección de muestra-->
+    <div class="row ">
+        <div class="container-img_plataform">
+            <!--comienzo del slider de imágenes-->
+            <img src="{% static 'img/pollo.png' %}" class="img-responsive-plataform" alt="img">
+            <img src="{% static 'img/barbecue.png' %}" class="img-responsive-plataform" alt="img">
+            <img src="{% static 'img/Un-Pollo-a-la-brasa.jpg.png' %}" class="img-responsive-plataform" alt="img">
+            <!--fin del slider de imágenes-->
+        </div>
+        <div class="container">
+            <section>
+                <button class="submit">Comprar</button>
+            </section>
+            <section>
+                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <section class="pos-center">
+            <label class="font-medium_float">1</label>
+            <label class="font-medium">pollo</label>
+            <p class="font-little">a la brasa</p>
+            <article class="content_font">
+                <p class="font-little ">+ papas</p>
+                <p class="font-little ">+ gaseosa de 1litro</p>
+                <p class="font-little--30 "> a solo:</p>
+                <h3 class="font-precio ">39.90</h3>
+            </article>
+        </section>
+        <div class="container">
+            <!--Comienzo de botones de slider-->
+            <div class="row">
+                <img class="img_fondo" src="{% static 'img/pino-rojo.jpg'%}" alt="fondo">
+                <p class="font-little_float">1</p>
+                <img src="{% static 'img/pollo.png' %}" class="cuadro_img" name="0" alt="img"></div>
+            <div class="row">
+                <img class="img_fondo" src="{% static 'img/pino-rojo.jpg'%}" alt="fondo">
+                <p class="font-little_float">2</p>
+                <img src="{% static 'img/barbecue.png' %}" class="cuadro_img" name="1" alt="img"></div>
+            <div class="row">
+                <img class="img_fondo" src="{% static 'img/pino-rojo.jpg'%}" alt="fondo">
+                <p class="font-little_float">3</p>
+                <img src="{% static 'img/Un-Pollo-a-la-brasa.jpg.png' %}" name="2" class="cuadro_img" alt="img"></div>
+
+        </div>
+        <!--fin de botones de slider-->
+    </div>
+    <!--fin de la sección de muestra-->
+</div>
+<!--fin el contenido principal-->
+<!--comienzo del texto menú-->
+<div class="container--column">
+    <div class="text-align">
+        <p class="text_menu">Menú</p>
+    </div>
+    <div class="text-align">
+        <p class="informacion--menu">MIRA LA GRAN VARIEDAD DE EXQUISITOS PLATOS QUE TENEMOS PARA OFRECERTE</p>
+    </div>
+</div>
+<!--fin del texto menú-->
+<!--Comienzo del contenido-->
+<div class="container_no-responsive">
+    <section class="container">
+        <section class="cuadro_info-container">
+            <img class="cuadro_img" src="{%static 'img/brasa-completo.jpg' %}" alt="image">
+            <p class="cuadro_info">1 pollo + papas + ensalada</p>
+            <p>a solo:</p>
+            <p class="font-precio">39.90</p>
+            <button class="submit">comprar</button>
+        </section>
+        <section class="cuadro_info-container">
+            <img class="cuadro_img" src="{%static 'img/4_pollo.jpg' %}" alt="image">
+            <p class="cuadro_info">1 pollo + papas + ensalada</p>
+            <p>a solo:</p>
+            <p class="font-precio">39.90</p>
+            <button class="submit">comprar</button>
+        </section>
+        <section class="cuadro_info-container">
+            <img class="cuadro_img" src="{%static 'img/5_pollo.png' %}" alt="image">
+            <p class="cuadro_info">1 pollo + papas + ensalada</p>
+            <p>a solo:</p>
+            <p class="font-precio">39.90</p>
+            <button class="submit">comprar</button>
+        </section>
+
+    </section>
+    <!--Comienzo de principales categorías-->
+    <section class="row_no-responsive">
+        <p class="text-align">principales categorías</p>
+        <section class="principal-cat">
+            <section class="row principal-cat_item_1">
+                <img class="img-responsive_absolute" src="{% static 'img/pollo-asado-citricos.jpg' %}" alt="image">
+                <p class="text-cat">Comidas</p>
+            </section>
+            <section class="row principal-cat_item_2">
+                <img class="img-responsive_absolute" src="{% static 'img/coc-1024x683.jpg' %}" alt="image">
+                <p class="text-cat color_white">Bebidas</p>
+            </section>
+            <section class="row principal-cat_item_3">
+                <img class="img-responsive_absolute" src="{% static 'img/dessert.jpg' %}" alt="image">
+                <p class="text-cat">Postre</p>
+            </section>
+            <section class="row principal-cat_item_4">
+                <img class="img-responsive_absolute" src="{% static 'img/etiqueta.png' %}" alt="image">
+                <p class="text-cat color_white">Promociones</p>
+            </section>
+        </section>
+    </section>
+    <!--fin de principales categorías-->
+</div>
+<p class="font-little">Sugeridas para ti:</p>
+<section class="container_grid-2">
+    <!--Comienzo de la información de los productos-->
+    <section class="cuadro_info-container">
+        <img class="cuadro_img" src="{%static 'img/1400000016074.jpg' %}" alt="image">
+        <p class="cuadro_info">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <p class="font-precio">39.90</p>
+        <button class="submit">comprar</button>
+    </section>
+    <!--fin de la información de los productos-->
+
+    <section class="cuadro_info-container">
+        <img class="cuadro_img" src="{%static 'img/fondo-4.jpg' %}" alt="image">
+        <p class="cuadro_info">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <p class="font-precio">39.90</p>
+        <button class="submit">comprar</button>
+    </section>
+    <section class="cuadro_info-container">
+        <img class="cuadro_img" src="{%static 'img/pata.jpg' %}" alt="image">
+        <p class="cuadro_info">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <p class="font-precio">39.90</p>
+        <button class="submit">comprar</button>
+    </section>
+    <section class="cuadro_info-container">
+        <img class="cuadro_img" src="{%static 'img/pollo-asado-citricos.jpg' %}" alt="image">
+        <p class="cuadro_info">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <p class="font-precio">39.90</p>
+        <button class="submit">comprar</button>
+    </section>
+
+    <!--fin del contenido-->
+</section>
+
+{%endblock%} {% block script %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}

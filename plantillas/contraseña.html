@@ -1,0 +1,62 @@
+<!DOCTYPE html> {% load static%}
+<html>
+
+<head>
+    <title>Norky's|Recuperar contraseña</title>
+    <link rel="icon" type="image/png" href="{% static '/img/logo_head.png' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <link href="{% static 'css/h_f.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/contraseña.css' %}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!--comienzo del formulario de contraseña-->
+    <a class="btn-a_salir" href="{% url '' %}">salir</a>
+
+    <div class="contra-contain">
+
+        <div class="contra-row" id="cambia">
+            <h3 class="font-medium contra-title">Forma de recuperar</h3>
+            <p class="contra-parrafo">Por que medio desea cambiar la contraseña:</p>
+            <div>
+                <form>
+                    <p class="contra-parrafo">Gmail:</p>
+                    <input type="gmail" name="section" class="contra-input" placeholder=" example@gmail.com">
+                    <br>
+                    <span class="contra-parrafo">y/o</span>
+                    <br>
+                    <p class="contra-parrafo">celular:</p>
+                    <input type="tel" name="section" class="contra-input" placeholder=" 999 999 999">
+                    <br>
+                    <button type="submit" class="submit" id="selec">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="contra-row" id="valida">
+            <h3 class="font-medium contra-title">Valida tu código</h3>
+            <form>
+                <p class="contra-parrafo">Ingresar el código enviado:</p>
+                <input type="text" placeholder=" 0000" class="contra-input">
+                <br>
+                <button type="submit" class="submit" id="enviar">Enviar</button>
+            </form>
+        </div>
+        <div class="contra-row" id="restablece">
+            <h3 class="font-medium contra-title">Restablece la contraseña</h3>
+            <form>
+                <p class="contra-parrafo">Ingresar la nueva contraseña:</p>
+                <input type="text" class=" contra-input" placeholder="***************">
+                <p class="contra-parrafo">validar la contraseña:</p>
+                <input type="text" class=" contra-input" placeholder="***************">
+                <br>
+                <button type="submit" class="submit" id="envio-2">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <!--fin del formulario de contraseña-->
+    <script src="{% static 'js/contraseña.js' %}"></script>
+</body>
+
+</html>

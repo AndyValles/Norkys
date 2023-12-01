@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <title>Norky's|Tarjeta</title>
+    <link rel="icon" type="image/png" href="{% static '/img/logo_head.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <link rel="stylesheet" href="{% static 'css/tarjeta.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/h_f.css' %}" type="text/css">
+</head>
+
+<body>
+    <div class="tarjeta--contain">
+        <a href="{% url '' %}" class="tarjeta--salida"><i class="fas fa-arrow-left"></i> salir</a>
+        <div class="row_tarjeta">
+            <section class="container-img_tarjeta">
+                <div class="contain_tarjeta">
+                    <!--comienzo del dibujo de la tarjeta-->
+                    <p class="txt-tarjeta-tipo">Credit Card</p>
+                    <img alt="chip" src="{% static 'img/chip.png' %}" class="img-tarjeta">
+                    <article class="content_txt-tarjeta">
+                        <span class="txt-tarjeta">0000</span>
+                        <span class="txt-tarjeta">0000</span>
+                        <span class="txt-tarjeta">0000</span>
+                        <span class="txt-tarjeta">0000</span>
+                    </article>
+
+                    <article class="contain-txt-tarjeta_v">
+                        <label class="txt-tarjeta_v">valido hasta:</label>
+                        <label class="txt-tarjeta"><span>10</span>/<span>23</span></label>
+                    </article>
+                    <p class="txt-tarjeta-name">Anónimo</p>
+                    <img class="tarjeta-tipo">
+                </div>
+                <div class="contain_tarjeta">
+                    <p class="tarjeta_text-center">servicio de atención:+01 999 999 999</p>
+                    <section class="tarjeta-banda"></section>
+                    <section class="tarjeta-banda-2"></section>
+                    <span class="tarjeta-text_ccv">000</span>
+                    <p class="tarjeta_text_center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, illo quia voluptas impedit laudantium error ad nesciunt repudiandae mollitia, asperiores ratione eius assumenda, iure amet voluptate aliquid consequuntur temporibus corporis?</p>
+                </div>
+                <!--fin del dibujo de la tarjeta-->
+            </section>
+            <!--comienzo del formulario de tarjeta-->
+            <section class="containt--tarjeta">
+
+                <section class="containt--center">
+                    <p class="user--title_font">Tarjeta</p>
+                    <form>
+                        <section class="row_tarjeta">
+                            <p class="">Nro° de tarjeta:</p>
+                            <input class="tarjeta_Nro-cuenta" type="text" inputmode="numeric" placeholder="0000" maxlength="4">
+                            <input class="tarjeta_Nro-cuenta" type="text" inputmode="numeric" placeholder="0000" maxlength="4">
+                            <input class="tarjeta_Nro-cuenta" type="text" inputmode="numeric" placeholder="0000" maxlength="4">
+                            <input class="tarjeta_Nro-cuenta" type="text" inputmode="numeric" placeholder="0000" maxlength="4">
+                        </section>
+                        <section class="row_tarjeta">
+                            <p>Nombre del propietario:</p>
+                            <input type="text" placeholder="User" class="input__user">
+                        </section>
+                        <section class="row_tarjeta">
+                            <p> Fecha de caducidad:</p>
+                            <input class="tarjeta_Nro-cuenta" type="number" placeholder="00">
+                            <label>/</label>
+                            <input class="tarjeta_Nro-cuenta" type="number" placeholder="00">
+                        </section>
+
+                        <section class="row_tarjeta">
+                            <p>CCV:</p>
+                            <input type="number" class="input_user" placeholder="000" maxlength="3" required>
+                        </section>
+                        <button type="submit" class="btn--tarjeta">Registrar tarjeta</button>
+                </section>
+
+                </form>
+            </section>
+            <!--comienzo del formulario de tarjeta-->
+        </div>
+    </div>
+</body>
+
+</html>

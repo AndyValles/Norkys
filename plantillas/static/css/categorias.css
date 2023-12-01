@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+/*Importación de una nuevo tipo de texto */
+
+.category-search {
+    /*Estilos del input en categorías*/
+    width: 70%;
+    height: 30px;
+    margin: 10px 10px 10px 20px;
+    box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.397);
+    border-radius: 20px;
+    color: green;
+    padding: 10px;
+}
+
+.category-search::placeholder {
+    /*Estilo del texto del input(placelholder)*/
+    color: gray;
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+}
+
+.icon-search {
+    /*Posición del icono de la lupa en un input */
+    position: absolute;
+    top: 30%;
+    left: 68%;
+}
+
+.category_list {
+    /*lista de forma de búsqueda en categorías*/
+    position: relative;
+    background: green;
+    width: 100%;
+    height: 30%;
+    color: white;
+    margin: 10px 0px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0);
+}
+
+.category_list-title {
+    /*Título de la lista de categorías(Buscar por:)*/
+    text-align: center;
+    width: 100%;
+}
+
+.category_opc-btn {
+    /*Opciones de forma de búsqueda(comidas,etc)*/
+    color: white;
+    margin: 10px 20px;
+    background: none;
+    border: none;
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+}
+
+.category_opc-btn:hover,
+.category_opc-btn:active {
+    /*Al pasar el mouse o presionarlo el color del texto cambiara a amarillo */
+    color: yellow;
+}
+
+.category_opc-btn:hover {
+    /*Al pasar el mouse por el botón el texto crecerá*/
+    transition: all 0.3s;
+    font-size: 15px;
+}
+
+.category_contain {
+    /*Contenedor total del contenido de la categoría su contenido es solo de dos columnas*/
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    column-gap: 10%;
+}
+
+.category-img {
+    /*Medida de la imagen del banner*/
+    width: 100%;
+}
+
+.category-section {
+    /*Contenedor total de los botones de sección*/
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.section-active {
+    /*Botón que está activado actualmente(1) se mostrara diferente al resto*/
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+}
+
+@media screen and (min-width: 480px) {
+    .icon-search {
+        /*En caso que se cambie la anchura de la ventana cambiara de tamaño(icono de la lupa del input)*/
+        top: 26.5%;
+    }
+    .category-img {
+        /*El banner reducirá el tamaño de anchura*/
+        width: 90%;
+        margin: 0px 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .icon-search {
+        /*El icono de la lupa cambiara su posición*/
+        top: 32%;
+        left: 48%;
+    }
+    .category-search {
+        /*El input reducirá su tamaño de anchura*/
+        width: 60%;
+    }
+    .category_list {
+        /*la lista de forma de búsqueda se posicionará mas a la derecha y cambiara su anchura y altura*/
+        position: absolute;
+        right: 3%;
+        width: 20%;
+        height: 25%;
+        margin: 10px 10px;
+        text-align: left;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0);
+        border-radius: 10px;
+    }
+    .category_list-title,
+    .category_opc-btn {
+        /*El título(Buscar por:) y los botones de opciones tendrán una margen de 30% a la derecha e izquierda*/
+        margin: 0px 30%;
+    }
+    .category_list-title {
+        /*El titulo(buscar por) se alineara a la izquierda*/
+        text-align: left;
+        width: 50%;
+        margin-top: 10px;
+    }
+    .category_contain {
+        /*El contenedor de contenido de categorias se maximara a 3 columnas*/
+        width: 80%;
+        grid-template-columns: repeat(3, 25%);
+        column-gap: 5%;
+    }
+    .category-img {
+        /*El banner cambiara de tamaño  y tendrá un espaciado de 30px*/
+        width: 80%;
+        margin: 0px 30px;
+    }
+    .category-search {
+        /*El input de búsqueda reducirá su anchura en un 50%*/
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .icon-search {
+        /*Icono de la lupa cambiara de tamaño*/
+        top: 37.5%;
+    }
+}

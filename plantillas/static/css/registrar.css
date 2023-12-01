@@ -1,0 +1,120 @@
+body {
+    /*El body comenzara con un fondo y el color del texto blanco*/
+    background: url(../img/fondo3.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    /*El scroll web obtendrá un color rosado*/
+    background: rgb(255, 0, 119);
+}
+
+.btn-a_salir {
+    /*Estilos para el botón de salida("a")*/
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+    background: rgb(255, 0, 98);
+    color: white;
+    text-align: center;
+}
+
+.btn-a_salir:hover {
+    /*Al pasar el mouse por el botón 
+    de salida este cambiara de tamaño*/
+    transform: scale(1.2);
+}
+
+.btn-a_salir:active {
+    /*Al presionar el botón este 
+    cambiará su fondo y su color de texto*/
+    background: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.regis--contain {
+    /*Estilos para el contenedor del formulario*/
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.regisrar--img {
+    /*Estilos para la imagen, la imagen no se visualizará*/
+    display: none;
+    width: 20%;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.regis--tel,
+.regis_input {
+    /*Estilos para los cuadros de registros(Input)*/
+    border-bottom: 1px solid rgb(255, 255, 255);
+    height: 30px;
+    color: white;
+}
+
+.regis_input {
+    /*Anchura para el cuadro de registro de texto*/
+    width: 100%;
+}
+
+.regis--tel {
+    /*Anchura para el cuadro de registro de teléfono*/
+    width: 50%;
+}
+
+p {
+    /*Todos los Elementos "p" obtendran un margen de 10px arriba y abajo*/
+    margin: 10px 0px;
+}
+
+.reg_item {
+    /*Estilos para la selección de elementos(Select-options)*/
+    border: none;
+    width: 100%;
+    height: 30px;
+    outline: none;
+}
+
+.btn--enviar {
+    /*Estilos para el botón de Registrase*/
+    background: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    height: 30px;
+    transition: all 0.1s;
+}
+
+.btn--enviar:active {
+    /*Al presionar el botón de Registrarse este 
+    cambiará de color de fondo a rojo y texto a negro*/
+    background: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 768px) {
+    .btn-a_salir {
+        /*El botón de salida cambiara de posición y de color*/
+        right: 50px;
+        background: rgb(0, 0, 0);
+        box-shadow: 0px 0px 5px rgb(255, 0, 98);
+    }
+    .btn-a_salir:hover {
+        /*Al pasar el mouse este obtendra una pequeña sombra color azul pastel*/
+        box-shadow: 0px 0px 5px rgb(0, 89, 255);
+    }
+    .regisrar--img {
+        /*LA imagen se visualizará*/
+        display: block;
+    }
+}

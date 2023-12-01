@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/Ingreso.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/h_f.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="user--container">
+        <div class="containt--register">
+            <h2 class="user--title_font">Iniciar sesión:</h2>
+            <!--comienzo del formulario de ingreso -->
+            <form class="form--user">
+                <h5>Usuario:</h5>
+                <input class="input__user" type="text" placeholder="example@gmail.com" value="usuario" required>
+                <h5>Contraseña:</h5>
+                <input class="input__user" type="password" placeholder="*************" value="contraseña" required>
+                <section>
+                    <input type="checkbox" class="checkbox" id="active">
+                    <label for="active" class="checkbox_label">Permanecer activa</label>
+                </section>
+                <section>
+                    <input type="checkbox" class="checkbox" id="activar">
+                    <label for="activar" class="checkbox_label">Acepta los</label>
+                    <span class="btn_custom">términos y condiciones</span>
+                </section>
+                <button type="submit" class="btn-ingreso">Ingresar</button>
+                <p>Olvidaste la <a href="{% url 'contraseña' %}" class="ref_custom">contraseña</a></p>
+                <p>¿No tienes cuenta? <a href="{% url 'registrar' %}" class="ref_custom">Registrarse</a></p>
+                <p>Entrar también con:</p>
+                <div class="contain_70">
+                    <a href="https://www.facebook.com" target="_blank"><img class="img_social" src="{% static 'img/facebook.png' %}" alt="img_facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img class="img_social" src="{% static 'img/instagram.png' %}" alt="img_twitter"></a>
+                    <a href="https://www.google.com" target="_blank"><img class="img_social" src="{% static 'img/google.png' %}" alt="img_google"></a>
+                </div>
+            </form>
+            <!--fin del formulario de ingreso -->
+        </div>
+        <!--comienzo de botón de salida -->
+        <div class="div_custom"><button class="btn--scroll_custom"><i class="fas fa-arrow-down text--btn_slider"></i></button></div>
+        <!--fin de botón de salida-->
+        <div class="contain--logo_user"><img src="{% static 'img/logo.png' %}" alt="image--logo" class="img-logo"></div>
+
+    </div>
+
+</body>
+
+</html>

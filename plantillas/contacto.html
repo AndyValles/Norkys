@@ -1,0 +1,48 @@
+{% extends 'General.html' %}
+<!--///////////////////////-->
+{% load static %}
+<!--///////////////////////-->
+{% block title%}Contacto{% endblock %}
+<!--///////////////////////-->
+{% block link%}
+<link href="{% static 'css/contactos.css' %}" rel="stylesheet" type="text/css">{% endblock %}
+<!--///////////////////////-->
+{% block content %}
+<h1 class="text-align contact-title">Contáctenos</h1>
+<!--Comienzo de la sección información de contacto-->
+<div class="conta-container">
+    <div>
+        <h2 class="contact-title">Información del contacto</h2>
+        <p class="contac-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat, quo quam cum iure, eaque non sequi sint nisi consectetur dignissimos nulla nobis laborum nam ipsam quasi eius hic sed.</p>
+        <p class="text-contac"><i class="fas fa-phone"></i> Teléfono:<span>111-111-111</span></p>
+        <p class="text-contac"><i class="fas fa-mobile-alt"></i> Celular:<span>999-999-999</span></p>
+        <p class="text-contac"><i class="fas fa-map-marker-alt"></i> Ubicación:<span>Av. Argentina Nro. 3093 Int 305 C.C.Minka – Callao -Prov. Const. del Callao</span></p>
+        <p class="text-contac"><i class="fas fa-at"></i> Correo:<span>ejemplo@gmail.com</span></p>
+        <div>
+            <a href="http://www.facebook.com"><i class="fab fa-facebook font-icon"></i></a>
+            <a href="http://www.twitter.com"><i class="fab fa-twitter font-icon"></i></a>
+            <a href="http://www.gmail.com"><i class="fas fa-envelope font-icon"></i></a>
+        </div>
+    </div>
+    <!--fin de la sección información de contacto-->
+    <!--Comienzo de la sección formulario de contacto-->
+    <div class="row-contac">
+        <form>
+            <p class="titulos">Nombre:</p>
+            <input type="text" class="contact-input" placeholder="User">
+            <p class="titulos">Correo:</p>
+            <input type="email" class="contact-input" placeholder="example@gmail.com">
+            <p class="titulos">Teléfono:</p>
+            <input type="tel" class="contact-input" placeholder="999-999-999">
+            <p class="titulos">Mensaje:</p>
+            <textarea class="mensaje-contact "></textarea>
+            <br>
+            <button type="submit" class="submit">Enviar</button>
+        </form>
+    </div>
+    <!--fin de la sección formulario de contacto-->
+
+</div>
+{% endblock %}
+<!--///////////////////////-->
+{%block script %}{% endblock %}

@@ -1,0 +1,249 @@
+.user--container {
+    /*Estilos del contenedor total*/
+    background: url(../img/pollo-asado-citricos.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    /*Posición fija para no desaparecer al bajar*/
+    width: 100%;
+    height: 100%;
+    /*Tamaño de la pantalla*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /*Se visualizará entre todos los elementos*/
+    overflow: hidden;
+    top: -100%;
+    transition: all 2s;
+}
+
+.containt--register {
+    /*Estilos para el contenedor del formulario de registro(tamaño y color de texto)*/
+    position: relative;
+    /*Los elementos que obtengan posición 
+    absoluta se quedarán en el contenedor*/
+    width: 80%;
+    height: 80%;
+    color: azure;
+    background: rgba(0, 0, 0, 0.562);
+}
+
+.form--user {
+    /*Margen de 20px derecha y izquierda del formulario*/
+    margin: 0px 20px;
+}
+
+.input__user {
+    /*Estilos para los cuadros de registro(Input)*/
+    background: none;
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 30px;
+    border-bottom: 1px solid rgb(255, 0, 0);
+    color: white;
+    margin: 0px 5px;
+}
+
+.ref_custom,
+.btn_custom {
+    /*Texto de referencia(a) y texto del 
+    botón obtendrán un color rojo*/
+    color: red;
+    cursor: pointer;
+    /*Al pasar el mouse este cambiara*/
+}
+
+.ref_custom:active,
+.btn_custom:active {
+    /*Al presionar el texto de referencia o 
+    botón este cambiara su color*/
+    color: black;
+}
+
+.div_custom,
+.contain--logo_user {
+    /*Contenedor del botón de salir y 
+    del logo se posicionará hacia abajo*/
+    position: absolute;
+    bottom: 0;
+}
+
+.contain--logo_user {
+    /*El logo se posicionará hacia la derecha*/
+    width: 50%;
+    right: 0px;
+    text-align: right;
+}
+
+.img-logo {
+    /*Tamaño de la imagen(logo)*/
+    width: 45%;
+}
+
+.contain_70 {
+    /*contenedor de 50% de anchura*/
+    width: 50%;
+}
+
+.img_social:hover {
+    /*Al pasar el mouse por las imágenes de 
+    redes sociales estas aumentaran su tamaño*/
+    transition: all 0.2s;
+    transform: scale(1.1);
+}
+
+.btn-ingreso {
+    /*Estilos del botón de ingresar */
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 80px;
+    width: 30%;
+    height: 25px;
+}
+
+.btn-ingreso:active {
+    /*Al pasar el mouse por el botón de 
+    ingreso su fondo desaparecerá y aparecerá un borde rojo*/
+    background: none;
+    border: 2px solid red;
+}
+
+.div_custom {
+    /*Estilos del contenedor del botón de salir*/
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.btn--scroll_custom {
+    /*Estilos para el botón de salir*/
+    border: none;
+    width: 25px;
+    height: 50px;
+    border-radius: 50px;
+    background: none;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px black;
+}
+
+.btn--scroll_custom:hover {
+    /*Al pasar el mouse por el botón de salir 
+    este cambiara su color de fondo y su tamaño*/
+    background: rgb(255, 252, 252);
+    transform: scale(1.1)
+}
+
+.btn--scroll_custom:active {
+    /*Al presionar el botón de salir este 
+    cambiará el color de fondo y de texto*/
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.text--btn_slider {
+    /*posición de texto del botón de salir*/
+    position: relative;
+    top: -30px;
+    animation: text_scroll 2s infinite;
+    /*Una pequeña animación para el texto*/
+}
+
+.checkbox:checked+.checkbox_label {
+    /*Al presionar el checkbox después del input el texto se marcará(a)*/
+    color: rgb(211, 211, 211);
+    text-decoration: line-through;
+}
+
+.checkbox:checked+.checkbox_label+.btn_custom {
+    /*Al presionar el checkbox después del input el texto se marcará(button)*/
+    color: red;
+    text-decoration: line-through;
+}
+
+
+/* función de aparecer*/
+
+.user__view {
+    top: 0%;
+}
+
+@keyframes text_scroll {
+    /*animación de cambio de posición para el texto del botón*/
+    0% {
+        top: -20px;
+    }
+    12.5% {
+        top: -10px;
+    }
+    14.28% {
+        top: 0px;
+    }
+    16.66% {
+        top: 10px;
+    }
+    20% {
+        top: 20px;
+    }
+    25% {
+        top: 30px;
+    }
+    100% {
+        top: 40px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .containt--register {
+        /*El contenedor del formulario 
+        obtendrá un menor tamaño*/
+        width: 60%;
+        height: 60%;
+        color: azure;
+        background: rgba(0, 0, 0, 0.562);
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .user--container {
+        /*El contenedor total*/
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .containt--register {
+        /*El contenedor del formulario obtendrá 
+        un menor tamaño y centrara todos los elementos*/
+        width: 50%;
+        height: 100%;
+        color: azure;
+        background: rgba(0, 0, 0, 0.562);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form--user {
+        /*El formulario obtendrá un tamaño de 70% de anchura*/
+        width: 70%;
+    }
+    .input__user {
+        /*Los textos del input se alinearán y
+        ocupará un tamaño de 80% de anchura*/
+        width: 80%;
+        height: 20%;
+        margin: 2px 5px;
+        text-align: justify;
+    }
+    .btn--scroll_custom {
+        /*El botón de salir cambiara 
+        su color de fondo a blanco*/
+        background: white;
+    }
+}

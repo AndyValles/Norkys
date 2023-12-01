@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/*Importación de los tipos de texto*/
+
+.contact-title {
+    /*Estilo para los títulos del contacto(tipo de texto)*/
+    font-family: Dancing Script;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 150%;
+}
+
+.contac-parrafo {
+    /*Estilos para los párrafos del contacto*/
+    font-family: Questrial, sans-serif;
+    width: 80%;
+    margin: 10px 0px;
+}
+
+.text-contac {
+    /*Estilos de los texto de contactos(Télefono,celular,etc), 
+    se cambiara el tamaño de acuerdo a la pantalla*/
+    margin: 10px 5px;
+    font-size: 90%;
+}
+
+.row-contac {
+    /*Secciones de
+    contenido de contacto(los contenidos tendrán una altura minima de 300px y un pequeño margen de 30px arriba y abajo)
+    */
+    width: 100%;
+    min-height: 300px;
+    margin: 30px 0px;
+}
+
+.contact-input {
+    /*Estilos de los input 
+    de contactos*/
+    margin: 5px 0px;
+    border: 1px solid black;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0px 20px;
+    color: green;
+}
+
+.contact-input::placeholder {
+    /*Color del texto de los input(placelholder)*/
+    color: gray;
+}
+
+.mensaje-contact {
+    /*Estilo de la sección mensajes de los contactos(Textarea),no se puede cambiar el tamaño*/
+    resize: none;
+    width: 80%;
+    height: 100px;
+    padding: 10px 20px;
+}
+
+.mensaje-contact:focus-visible {
+    /*Estilos al mantenerlo presionado la sección de mensajes(textarea) 
+    cambiara el color de los bordes y se agregara una pequeña sombra*/
+    box-shadow: 0 0 10px rgb(0, 217, 255);
+    outline: none;
+    border: 1px solid #049bff;
+}
+
+.font-icon {
+    /*Tamaño de los iconos de la primera sección de contactos*/
+    font-size: 30px;
+    margin: 0px 10px;
+    color: rgb(1, 158, 255);
+}
+
+.font-icon:hover {
+    /*Al pasar el mouse el icono se agrandara y cambiara de color*/
+    transition: all 0.5s;
+    font-size: 40px;
+    color: rgb(51, 255, 0);
+}
+
+@media screen and (min-width: 768px) {
+    .conta-container {
+        /*Al cambiar la pantalla se formaran dos 
+        columnas(Las secciones se oredenarán en dos secciones )*/
+        display: flex;
+    }
+    .row-contac {
+        /*Se agregara un borde en la parte 
+        izquierda de la segunda sección(una forma de dividir las dos secciones)*/
+        border-left: 1px solid yellow;
+        padding: 0px 30px;
+    }
+}

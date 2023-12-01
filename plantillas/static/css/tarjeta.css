@@ -1,0 +1,227 @@
+.tarjeta--contain {
+    /*Contenedor total de la tarjeta*/
+    background: url(../img/carretera-de-anochecer-nubes-y-bosque.jpg);
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*Los elementos se ordenarán en filas*/
+    justify-content: center;
+    align-items: center;
+    /*Los elementos se centran en medio de toda la pantalla*/
+    color: white;
+}
+
+.row_tarjeta {
+    /*Sección de la columna */
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /*elementos centrados*/
+    align-items: center;
+}
+
+.containt--center {
+    /*Todo el contenido se centrará (Para el dibujo de la tarjeta)*/
+    text-align: center;
+}
+
+.containt--tarjeta {
+    /*Estilos del formulario de la tarjeta*/
+    width: 100%;
+    height: 90%;
+    background: none;
+    /*se eliminará el fondo para un mejor aspecto*/
+    box-shadow: 2px 5px 10px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta_Nro-cuenta {
+    /*Aspecto para el cuadro numérico 
+    para agregar los números de la tarjeta (Input)*/
+    width: 20%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.288);
+    border-bottom: 2px solid rgb(255, 254, 254);
+    color: rgb(255, 255, 255);
+}
+
+.tarjeta_Nro-cuenta::placeholder {
+    /*Color para el texto del cuadro numérico*/
+    color: black;
+}
+
+.tarjeta--salida {
+    /*Aspecto para el botón de salir*/
+    width: 50px;
+    height: 20px;
+    background: red;
+    color: white;
+    text-align: center;
+}
+
+.input__user {
+    /*Aspecto para el cuadro de 
+    texto del nombre del propietario(Input)*/
+    background: none;
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 30px;
+    border-bottom: 1px solid rgb(255, 0, 0);
+    color: white;
+    margin: 0px 5px;
+}
+
+.input__user::placeholder {
+    /*color y centrado al texto del 
+    cuadro del nombre del propietario*/
+    text-align: center;
+    color: #fff;
+}
+
+.container-img_tarjeta {
+    /*Contenedor del dibujo de la tarjeta*/
+    width: 0%;
+    /*En celular el contenido no es visible*/
+    overflow: hidden;
+    /*El contenido fuera del contenedor no es visible*/
+}
+
+.btn--tarjeta {
+    /*botón de Registro de la tarjeta*/
+    border: none;
+    background: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn--tarjeta:active {
+    /*Al presionar el botón de registro este cambiara de 
+    color en el fondo y en el texto además se agregará una sombra*/
+    background: white;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0);
+}
+
+@media screen and (min-width: 768px) {
+    .container-img_tarjeta {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /*El contenido se ordenará en columnas*/
+        width: 50%;
+        /*El contenido es visible*/
+        height: 90%;
+        background: rgb(255, 255, 255);
+        align-items: center;
+        justify-content: center;
+        /*contenido centrado*/
+        border-radius: 20px 0px 0px 20px;
+    }
+    .contain_tarjeta {
+        /*contenedor que referencia a una tarjeta, 
+        Se le agregar estilos para dar un aspecto como una tarjeta*/
+        background: url(../img/carretera-de-anochecer-nubes-y-bosque.jpg);
+        background-size: cover;
+        position: relative;
+        width: 70%;
+        height: 150px;
+        border-radius: 10px;
+        margin: 10px 0px;
+    }
+    .tarjeta {
+        width: 60%;
+        height: 60%;
+        margin: 20px;
+    }
+    .text_tarjeta {
+        /*texto sin posición*/
+        position: absolute;
+    }
+    /*comienzo de la tarjeta*/
+    .img-tarjeta {
+        width: 20%;
+        margin: 0px 20px;
+        transform: rotate(90deg);
+    }
+    .content_txt-tarjeta {
+        /*posición de los textos del 
+        dibujo de la tarjeta(Número de cuenta:0000)*/
+        margin: 0px 25px;
+    }
+    .contain-txt-tarjeta_v {
+        /*posición de los textos del dibujo de la tajreta(valido hasta)*/
+        position: absolute;
+        left: 40px;
+    }
+    .txt-tarjeta_v {
+        /*Tamaño para los textos*/
+        font-size: 10px;
+    }
+    .tarjeta-tipo {
+        /*Estilos de imagen del tipo de tarjeta(visa),
+        si no agrega información esta aparecerá en blanco al 
+        agregar información esta cambiara la imagen segun lo puesto*/
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        background: white;
+        width: 20%;
+        height: 15%;
+    }
+    .txt-tarjeta-name {
+        /*posición para el texto del dibujo de la tarjeta(Anónimo)*/
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+    }
+    .txt-tarjeta-tipo {
+        margin: 10px 0px 0px 20px;
+    }
+    /*tarjeta 2*/
+    .tarjeta_text-center {
+        /*Tamaño y centrado del texto*/
+        font-size: 10px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .tarjeta-banda {
+        /*dibujo de rectángulo negro de la tarjeta 2*/
+        width: 100%;
+        height: 20%;
+        background: black;
+    }
+    .tarjeta-banda-2 {
+        /*dibujo de rectángulo gris de la tarjeta 2*/
+        position: absolute;
+        right: 90px;
+        top: 60px;
+        width: 50%;
+        height: 15%;
+        background: rgb(226, 225, 225);
+    }
+    .tarjeta-text_ccv {
+        /*Estilos para la apariencia del ccv en la tarjeta*/
+        background: rgb(255, 255, 255);
+        font-size: 12px;
+        color: rgb(88, 88, 88);
+        position: absolute;
+        top: 63px;
+        right: 73px;
+    }
+    .tarjeta_text_center {
+        /*tamaño y centrado del texto(Información de la tarjeta 2)*/
+        text-align: center;
+        margin: 50px 20px 0px 20px;
+        font-size: 7px;
+    }
+}

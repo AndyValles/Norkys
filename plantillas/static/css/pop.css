@@ -1,0 +1,244 @@
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Playfair+Display&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+    /*Importación de tipo de texto*/
+    /*Comienzo de las Ventanas emergentes*/
+    
+    * {
+        /*Todos los elementos obtendrán un margen exterior y interior de 0*/
+        margin: 0;
+        padding: 0;
+    }
+    
+    button {
+        /*Todos los elementos "button" comenzarán sin fondo ni borde*/
+        background: none;
+        border: none;
+        outline: none;
+    }
+    
+    .fondo,
+    .contentVentanaE {
+        /*Tamaño del fondo y el contenedor total de las ventanas emergentes*/
+        width: 100%;
+    }
+    
+    .contentVentanaE {
+        /*Estilos del contenedor total de las ventanas emergentes*/
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 3000;
+    }
+    
+    .fondo {
+        /*Fondo oscuro detrás de las ventanas emergentes*/
+        position: absolute;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.425);
+        z-index: -1;
+    }
+    
+    #salir {
+        /*Estilos del botón de salir de las ventanas emergentes*/
+        position: absolute;
+        top: 4%;
+        right: 4%;
+        color: red;
+        background: white;
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+        border-radius: 10px;
+        z-index: 10;
+    }
+    
+    #salir:active {
+        /*Al presionar el botón  este cambiara su color y su fondo*/
+        background: black;
+        color: white;
+    }
+    
+    .Local,
+    .mapa,
+    .politica,
+    .Termino-condiciones,
+    .libro_r {
+        /*Tamaño y estilos para las ventanas emergentes*/
+        position: absolute;
+        overflow-y: scroll;
+        /*El scroll web solo aparecera en la derecha de la ventana emergente*/
+        width: 90%;
+        height: 90%;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        visibility: hidden;
+    }
+    
+    .Local {
+        /*Texto alineado para la ventana emergente de locales*/
+        background: black;
+        text-align: center;
+    }
+    
+    .img-pop {
+        /*Tamaño de la imagen de la ventana emergente de Locales*/
+        width: 90%;
+    }
+    
+    .politica,
+    .Termino-condiciones {
+        /*Margen interno para la ventana emergente 
+        de políticas y términos y condiciones*/
+        padding: 10px 30px;
+    }
+    
+    .libro_r {
+        /*Imagen de fondo para el formulario de libro de reclamaciones*/
+        background: url(../img/fondo2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .Local::-webkit-scrollbar,
+    .mapa::-webkit-scrollbar,
+    .politica::-webkit-scrollbar,
+    .Termino-condiciones::-webkit-scrollbar,
+    .libro_r::-webkit-scrollbar {
+        /*Tamaño de los scroll web de las ventanas emergentes*/
+        width: 10px;
+    }
+    
+    .Local::-webkit-scrollbar-thumb,
+    .mapa::-webkit-scrollbar-thumb,
+    .politica::-webkit-scrollbar-thumb,
+    .Termino-condiciones::-webkit-scrollbar-thumb,
+    .libro_r::-webkit-scrollbar-thumb {
+        /*Estilo de los scroll web de las ventanas emergentes*/
+        background: rgb(255, 251, 3);
+        border-radius: 10px;
+    }
+    
+    .title_pop {
+        /*Estilos de los títulos de las ventanas*/
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+        text-align: center;
+        margin: 20px 0px;
+    }
+    
+    .form_submit {
+        /*Margen para el formulario de 
+        libro de reclamaciones*/
+        margin-left: 10px;
+    }
+    /*Comienzo Tamaños y estilos de los textos */
+    
+    .subtitulo-center,
+    .subtitulo_pop {
+        color: rgb(0, 0, 0);
+        margin-top: 10px;
+    }
+    
+    .subtext_center,
+    .subtitulo-center {
+        margin: 10px 0px;
+        text-align: center;
+    }
+    
+    .subtext_center,
+    .subtext {
+        font-size: 70%;
+        margin: 10px 0px;
+        color: rgb(0, 0, 0);
+    }
+    
+    .subtext-medium {
+        font-size: 80%;
+        color: rgb(0, 0, 0);
+    }
+    /*fin de los tamaños y estilos de los textos */
+    
+    .check {
+        /*Margen del checkbox del formulario*/
+        margin: 5px 0px;
+    }
+    
+    .medida_in {
+        /*Estilos para los cuadros de texto (Input)*/
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 2px solid rgb(255, 0, 0);
+        color: rgb(0, 0, 0);
+        margin: 5px 0px;
+        width: 80%;
+        height: 30px;
+    }
+    
+    .medida_in::placeholder {
+        /*Color de texto de los cuadros de texto*/
+        color: rgba(255, 255, 255, 0.836);
+    }
+    
+    .medida_in:focus::placeholder {
+        /*Al presionar los cuadros de texto
+         cambiaran de posición , tamaño y color*/
+        position: absolute;
+        top: -3px;
+        color: black;
+        font-size: 10px;
+    }
+    
+    .Documento {
+        /*Estilos para la seleccion de documentos(Select-options)*/
+        outline: none;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
+        width: 90%;
+        height: 30px;
+    }
+    
+    .anuncio {
+        /*Tamaño para la descripción del reclamo*/
+        width: 90%;
+        height: 100px;
+    }
+    
+    .texture_bt_file {
+        /*Estilos para el Input de archivos*/
+        width: 90%;
+        margin-top: 10px;
+        font-size: 12px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .enviar {
+        /*Estilos para el botón de envió*/
+        background: blue;
+        width: 30%;
+        height: 30px;
+        border-radius: 5px;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .enviar:active {
+        /*Al presionar el botón de envió 
+        este cambiara su fondo de color negro*/
+        background: black;
+    }
+    
+    @media screen and (min-width: 768px) {
+        .politica,
+        .Termino-condiciones,
+        .libro_r {
+            /*Disminución de tamaño a las ventanas emergentes */
+            width: 80%;
+            height: 90%;
+        }
+    }

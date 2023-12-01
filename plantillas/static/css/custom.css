@@ -1,0 +1,114 @@
+:root {
+    /*Variables de colores */
+    --color_Norkys: rgb(251, 255, 0);
+    --color_black: rgb(0, 0, 0);
+    --color_gray: rgba(0, 0, 0, 0.384);
+    --color_green: rgba(0, 116, 0, 0.918);
+    --color_white: rgb(255, 255, 255);
+}
+
+a {
+    /*Los elementos "a" se iniciarán sin una decoración*/
+    text-decoration: none;
+}
+
+button {
+    /*Los elementos "button" se iniciáran sin un outline*/
+    outline: none;
+}
+
+
+/* colores y colores de fondo - bordes*/
+
+.color_yellow {
+    color: var(--color_Norkys);
+}
+
+.color_black {
+    color: var(--color_black);
+}
+
+.color_gray {
+    color: var(--color_gray);
+}
+
+.color_green {
+    color: var(--color_green);
+}
+
+.color_white {
+    color: white;
+}
+
+
+/*border*/
+
+.border_none {
+    border: none;
+}
+
+
+/*Visibilidad y otros*/
+
+.hidden_in {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.cursor_custom {
+    /*Estilos del cursor*/
+    cursor: pointer;
+}
+
+.list_none {
+    /*lista sin estilos*/
+    list-style: none;
+}
+
+
+/*tipos y  tamaños*/
+
+.column {
+    /*cotenedor de columnas*/
+    display: flex;
+    flex-wrap: wrap nowrap;
+    width: 70%;
+}
+
+
+/*contens*/
+
+.content_center {
+    /*contenido centrado*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_left {
+    /*contenido centrado hacia la izquierda*/
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+
+.content_right {
+    /*contenido centrado hacia la derecha*/
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+}
+
+.content_start {
+    /*contenido centrado a su posición de origen*/
+    text-align: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content_end {
+    /*contenido centrado a su posición final*/
+    text-align: end;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

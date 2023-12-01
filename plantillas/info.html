@@ -1,0 +1,135 @@
+{% extends 'General.html' %}
+<!--////////////////////////////////-->
+{% load static %}
+<!--////////////////////////////////-->
+{% block title %}Info{% endblock %}
+<!--////////////////////////////////-->
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/info.css' %}" type="text/css">{% endblock %}
+<!--////////////////////////////////-->
+{% block content %}
+<div class="info--container">
+    <!--Comienzo de la información del producto a comprar-->
+    <div class="info--container_descripcion">
+        <h2 class="info--title">Combo 2 pollos</h2>
+        <p class="cuadro_info">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <p class="font-precio">39.90</p>
+        <button class="submit">Comprar</button>
+    </div>
+    <img src="{% static 'img/2_pollo.jpg' %}" class="info--img">
+    <div class="contain--precio">
+        <p class="contain--precio-text">Añadir mas gaseosa:</p>
+        <button class="submit">s/ 99.99</button>
+        <p class="contain--precio-text">Añadir mas papa:</p>
+        <button class="submit">s/ 99.99</button>
+        <p class="contain--precio-text">Añadir mas pollo:</p>
+        <button class="submit">s/ 99.99</button>
+    </div>
+</div>
+<!--fin de la información del producto a comprar-->
+<!--Comienzo de platos similares-->
+<h2 class="titulo_20">Similares:</h2>
+<div class="info--contain">
+    <div class="info--contain_row">
+        <img src="{% static 'img/2_pollo.jpg' %}" class="cuadro_img">
+        <p class=" cuadro_info ">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <button class="submit ">s/ 99.99</button>
+    </div>
+    <div class="info--contain_row ">
+        <img src="{% static 'img/2_pollo.jpg' %} " class="cuadro_img">
+        <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <button class="submit ">s/ 99.99</button>
+    </div>
+    <div class="info--contain_row ">
+        <img src="{% static 'img/2_pollo.jpg' %} " class="cuadro_img">
+        <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <button class="submit ">s/ 99.99</button>
+    </div>
+    <div class="info--contain_row ">
+        <img src="{% static 'img/2_pollo.jpg' %} " class="cuadro_img ">
+        <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+        <p>a solo:</p>
+        <button class="submit ">s/ 99.99</button>
+    </div>
+</div>
+<!--fin de platos similares-->
+<!--Comienzo de promociones-->
+<div>
+    <h2 class="titulo_20">Promociones:</h2>
+    <div class="info--contain ">
+        <section class="info--section_row ">
+            <img class="cuadro_img " src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+        <section class="info--section_row ">
+            <img class="cuadro_img " src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+        <section class="info--section_row ">
+            <img class="cuadro_img" src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+        <section class="info--section_row ">
+            <img class="cuadro_img " src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+        <section class="info--section_row ">
+            <img class="cuadro_img" src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+        <section class="info--section_row ">
+            <img class="cuadro_img " src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+        <section class="info--section_row ">
+            <img class="cuadro_img" src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+        <section class="info--section_row ">
+            <img class="cuadro_img" src="{% static 'img/2_pollo.jpg' %} ">
+            <article class="info-section_hidden ">
+                <p class="cuadro_info ">1 pollo + papas + ensalada</p>
+                <p>a solo:</p>
+                <button class="submit ">s/ 99.99</button>
+            </article>
+        </section>
+
+    </div>
+    <!--fin de promociones-->
+
+</div>
+{% endblock %}
+<!--////////////////////////////////-->
+{% block script %}{% endblock %}

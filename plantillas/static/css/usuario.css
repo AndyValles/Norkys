@@ -1,0 +1,142 @@
+* {
+    /*Todos los elementos obtendrán un margen exterior y interior de 0*/
+    margin: 0;
+    padding: 0;
+}
+
+.total {
+    /*Fondo del body*/
+    background: url(../img/fondo-4.jpg) center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.contain--configuracion {
+    /*contenedor de la configuración de cambio de fondo*/
+    transition: all 0.5s;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: -100%;
+    /*100% hacia la izquierda para desaparecer el elemento*/
+    background: rgb(0, 0, 0, .8);
+    z-index: 100;
+    /*El contenido se visualizará sobre todos los elementos*/
+}
+
+.configuracion {
+    /*Sección del contenedor de la configuración*/
+    overflow: hidden;
+    padding: 20px 10px;
+    width: 70%;
+    min-height: 70vh;
+    background: rgba(255, 255, 255, 0.671);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.user--back,
+.contain-list,
+.user--column_flex {
+    /*Contendor de la información del usuario, 
+    contenedor de la lista y 
+    contenedor de favoritos posición del texto alineado*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.user--column_flex {
+    /*Tamaño del contenedor de favoritos*/
+    width: 100%;
+}
+
+.user--back {
+    /*Estilos del contenedor de la información del usuario*/
+    position: relative;
+    background: rgb(253, 253, 253);
+    width: 100%;
+    min-height: 50vh;
+    border-radius: 0px 0px 100px 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+    overflow: hidden;
+}
+
+.user--png {
+    /*Tamaño y margen de la imagen del usuario*/
+    width: 5em;
+    margin: 10px 0px;
+}
+
+.contain-list {
+    /*Estilos del contenedor de la lista*/
+    width: 60%;
+    min-height: 200px;
+    background: rgb(0, 132, 255);
+    margin: 20px 5px 5px 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+    color: white;
+}
+
+.btn-list_user {
+    /*Color de texto de las opciones de la lista*/
+    color: white;
+}
+
+.btn-list_user:active {
+    /*Al pasar el mouse por las opciones 
+    de la lista estas cambiaran de color*/
+    color: green;
+}
+
+.contain--grid__2-3 {
+    /*Contenedor de 2 filas con tamaño de 40%*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    column-gap: 50px;
+}
+
+.row {
+    /*nuevo atributo en la clase "row"(Css/h_f), texto alineado*/
+    text-align: center;
+}
+
+
+/*funciones de interacción*/
+
+.visibility--configuracion {
+    left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .user--contain {
+        /*El contenido se visualizará en filas*/
+        display: flex;
+    }
+    .contain--grid__2-3 {
+        /*El contenedor de 2 filas 
+        cambiará a 3 filas con 33.3% de tamaño*/
+        grid-template-columns: repeat(3, 33.3%);
+    }
+    .contain-list {
+        /*Margen de 100px a la izquierda 
+        del contenedor de listas*/
+        margin-left: 100px;
+    }
+    .user--back {
+        /*Sin bordes redondeados en el contenedor de las
+        Información del usuario*/
+        border-radius: 0px;
+    }
+    .contain--configuracion {
+        /*El contenedor de la configuración 
+        cambiará su tamaño a 40%*/
+        width: 40%;
+    }
+}

@@ -1,0 +1,106 @@
+{% load static %}
+<!Doctype html>
+<html lang="es">
+
+<head>
+    <title>Norky's|{%block title %}{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static '/img/logo_head.png' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/Ingreso.css' %}" rel="stylesheet" type="text/css"> {%block link%}{%endblock%}
+</head>
+
+<body>
+    {% include 'Ingreso.html' %}
+    <!--Comienzo del menú-->
+    <header class="content_menu">
+        <div class="content_search">
+            <input type="text" placeholder="¿Que es lo que está buscando?" class="search content_center">
+            <button class="submit">buscar</button>
+            <button class="salir"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-nav">
+            <i class="fas fa-bars icon-hamburger cursor_custom"></i>
+        </div>
+
+        <div class="container_menu">
+            <nav>
+                <img src="{% static '/img/logo.png' %}" alt="Logo" class="img-responsive">
+                <a class="active_menu cursor_custom" id="search"><img src="{% static '/img/search-solid.svg' %}" alt="search" class="img-icon_responsive"></a>
+                <a class="active_menu cursor_custom" id="usuario"><img src="{% static '/img/user-circle-solid.svg' %}" alt="user-icon" class="img-icon_responsive"></a>
+                <a class="active_menu cursor_custom" href="{% url 'tarjeta' %}"><img src="{% static '/img/shopping-cart-solid.svg' %}" alt="shop-car" class="img-icon_responsive"></a>
+                <ul class="menu hidden_in list_none">
+                    <!--Comienzo de la lista del menú-->
+                    <li class="menu_row"><a href="{%url '' %}" name="0" class="btn--menu referece active">Inicio</a></li>
+                    <li class="menu_row">
+                        <a class="entrada_menu btn--menu" name="1" href="{%url 'categorias' %}">Categorías</a>
+                        <!--Comienzo de las sub opciones-->
+                        <ul class="content_submenu hidden_in">
+                            <li class="submenu">Comidas</li>
+                            <li class="submenu">Bebidas</li>
+                            <li class="submenu">Postres</li>
+                            <li class="submenu">Aperitivos</li>
+                        </ul>
+                        <!--fin de las sub opciones-->
+                    </li>
+                    <li class="menu_row"><a class="entrada_menu btn--menu" name="2" href="{% url 'contacto' %}">Contactos</a>
+                    </li>
+                    <!--fin de la lista del menú-->
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!--fin del menú-->
+
+    {%block content %}{%endblock%}{% include 'pop.html' %}
+    <!--comienzo del pie de pagina-->
+    <footer class="container">
+        <section class="row">
+            <p class="subtitulo color_white"><i class="fas fa-truck"></i> :
+                <a href="" class="color_white hover-items">999999999</a>
+            </p>
+            <p class="subtitulo color_white"><i class="fas fa-phone-alt"></i> :
+                <a href="" class="color_white hover-items">999999999</a>
+            </p>
+            <p class="subtitulo color_white"><i class="fas fa-envelope"></i> :
+                <a href="" class="color_white hover-items">ejemplo@gmail.com</a>
+            </p>
+            <h3 class="titulos">Síguenos en:</h3>
+            <section class="column">
+                <img src="{% static '/img/facebook.png' %}" class="img_social" alt="img">
+                <img src="{% static '/img/instagram.png' %}" class="img_social" alt="img">
+                <img src="{% static '/img/google.png' %}" class="img_social" alt="img">
+            </section>
+        </section>
+        <section class="row">
+            <h3 class="titulos">Servicios:</h3>
+            <button class="color_white subtitulo hover-items footer_btn" name="1">Locales</button>
+            <br>
+            <button class="color_white subtitulo hover-items footer_btn" name="2">ubicación</button>
+        </section>
+        <section class="row">
+            <h3 class="titulos">Legal:</h3>
+            <button class="color_white subtitulo hover-items footer_btn" name="3">Términos y condiciones</button>
+            <br/>
+            <button class="color_white subtitulo hover-items footer_btn" name="4">Políticas de privacidad</button>
+            <br>
+            <a href="{% url 'nosotros' %}" class="hover-items color_white subtitulo">Nosotros</a>
+            <br>
+            <a href="{% url 'usuario' %}">Usuario</a>
+            <br>
+            <a href="{% url 'info'%}">info</a>
+        </section>
+        <section>
+            <h3 class="titulos ">Otros servicios:</h3>
+            <button class="color_white hover-items footer_btn" name="5"><img src="{% static '/img/libro-de-reclamaciones.png' %}" class="img_social" alt="Libro" name="5">Libro de reclamaciones</button>
+            <img src="{% static '/img/logo.png' %}" class="Logo-footer" alt="Logo">
+        </section>
+    </footer>
+    <!--fin del pie de pagina-->
+    <script src="{% static '/js/index.js' %}"></script>
+    {% block script %}{%endblock%}
+</body>
+
+</html>

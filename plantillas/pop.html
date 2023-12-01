@@ -1,0 +1,190 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/pop.css'%}" type="text/css">
+</head>
+<!--Ventanas emergentes-->
+
+<div class="contentVentanaE">
+    <div class="fondo"></div>
+    <button id="salir">X</button>
+    <!--comienzo de libro de reclamaciones-->
+    <div class="libro_r">
+        <h2 class="title_pop">Enviar Solicitud</h2>
+        <!--Comienzo del formulario de libros y reclamaciones-->
+        <form class="form_submit">
+            <h3 class="subtitulo_pop">Correo electrónico</h3>
+
+            <input type="email" class="medida_in entrada_f" onfocus="entrada();" required>
+            <h3 class="subtitulo_pop">Tipo de documento</h3>
+            <select class="Documento">
+                <option >Seleccionar</option>
+                <option value="DNI">DNI</option>
+                <option value="CE">CE</option>
+                <option value="Pasaporte">Pasaporte</option>
+            </select>
+            <p class="subtext">Seleccione el tipo de documento</p>
+            <h3 class="subtitulo_pop">Número de Documento</h3>
+
+            <input type="text" class="medida_in entrada_f" onfocus="entrada();" required>
+            <p class="subtext">Escriba el número de documento</p>
+            <h3 class="subtitulo_pop">Fecha</h3>
+            <input type="date" class="date" required>
+            <p class="subtext">Fecha del reclamo</p>
+            <h3 class="subtitulo_pop">Nombres y apellidos</h3>
+            <input type="text" placeholder="Ingrese nombre" class="col_NA" required>
+            <input type="text" placeholder="Ingrese apellido " class="col_NA" required>
+            <p class="subtext">Nombres y apellidos completos de la tarjeta habiente</p>
+            <h3 class="subtitulo_pop">Domicilio del consumidor</h3>
+            <input type="text" placeholder="Direccion" class="medida_in entrada_f" required>
+            <p class="subtext">Agregue domicilio del consumidor</p>
+            <h3 class="subtitulo_pop">Teléfono de contacto</h3>
+            <input type="tel" placeholder="Ingrese telefono" class="medida_in entrada_f" required>
+            <h3 class="subtitulo_pop">Local</h3>
+            <input type="text" placeholder="Ingrese Local" class="medida_in entrada_f" required>
+            <p class="subtext">Cine seleccionado en la compra</p>
+            <h3 class="subtitulo_pop"> Motivo</h3>
+            <input type="text" placeholder="Ingrese El movivo del reclamo" class="medida_in entrada_f">
+            <h3 class="subtitulo_pop">Servicio o Producto</h3>
+            <input type="text" placeholder="Ingrese Servicio" class="medida_in entrada_f" required>
+            <h3 class="subtitulo_pop">Monto(S/)</h3>
+            <input type="number" placeholder="Ingrese monto" class="medida_in entrada_f">
+            <h3 class="subtitulo_pop">Asunto</h3>
+            <input type="text" placeholder="Ingrese Asunto" class="medida_in entrada_f" required>
+            <h3 class="subtitulo_pop">Reclamo o Queja</h3>
+            <select class="Documento">
+                <option>Seleccionar</option>
+                <option value="Queja">Queja</option>
+                <option value="Reclamo">Reclamo</option>
+            </select>
+            <h3 class="subtitulo_pop">Descripción</h3>
+            <textarea class="anuncio"></textarea>
+            <p class="subtext">Ingrese los detalles de esta solicitud. Un integrante de nuestro personal de soporte responderá en breve.</p>
+            <h3 class="subtitulo_pop">Pedido</h3>
+            <input type="text" placeholder="Ingrese Pedido" class="medida_in entrada_f" required>
+            <br>
+            <input type="checkbox" class="check" id="check_1" required>
+            <label for="check_1" class="subtext-medium">Me encuentro conforme con los términos consignados en el contenido de mi disconformidad (queja / reclamación)</label>
+            <br>
+            <input type="checkbox" class="check" id="diclamer" required>
+            <label for="diclamer" class="subtext-medium">Disclaimer</label>
+            <p class="subtext">Mediante la presentación de mi disconformidad (queja / reclamo) a través del presente Libro de Reclamaciones Virtual, otorgo mi consentimiento y autorizo expresamente a Norky's a realizar el tratamiento (recolección, almacenamiento, procesamiento,
+                transmisión y uso) de mis datos personales proporcionados, con la finalidad que se le brinde oportuna atención. En cualquier circunstancia, el tratamiento de los datos se encontrará protegido y su acceso estará limitado a aquellas personas
+                debidamente autorizadas para manejarlos, quienes lo realizarán respetando todas las condiciones de seguridad y confidencialidad que establece la normativa de la materia.</p>
+            <p class="subtext">Archivos adjuntos</p>
+            <div><input type="file" class="texture_bt_file"></div>
+            <br>
+            <button class="enviar">Enviar</button>
+        </form>
+        <!--fin del formulario de libros y reclamaciones-->
+    </div>
+    <!--fin de libro de reclamaciones-->
+    <!--comienzo de políticas de privacidad-->
+    <div class="politica">
+        <div class="informacion"></div>
+        <h1 class="title_pop">POLITICAS DE PRIVACIDAD </h1>
+        <h1 class="subtext-medium">POLÍTICA DE PRIVACIDAD – SITIO WEB</h1>
+        <p class="subtext">
+            A través del presente documento, HY ASORES S.A.C. (en adelante, “HY”) con RUC Nº 20606207914 con domicilio en Calle Chinchon N° 630 – San Isidro – Lima – Lima, en cumplimiento con lo estipulado en la Ley Nº 29733, Ley de Protección de Datos Personales
+            y su Reglamento, aprobado mediante Decreto Supremo Nº 003-2013-JUS, les informa a los usuarios que HY trata sus datos a través del presente sitio web.
+
+            <p class="subtext">En ese sentido, la presente política tiene por finalidad informarle la manera cómo nosotros recolectamos, utilizamos, difundimos y/o divulgamos la información que obtenemos a través del presente Sitio Web.
+            </p>
+
+            <p class="subtext">Hemos redactado nuestra Política de Privacidad de manera que no contenga un lenguaje muy técnico, ya que a menudo se hace difícil entender el contenido de este documento. Por supuesto, si aún tiene preguntas sobre algún aspecto de nuestra
+                Política de Privacidad, no dude en contactarse con nosotros.</p>
+
+            <p class="subtext">En nuestra política de privacidad se explica:
+            </p>
+
+
+            <ol>
+                <li class="subtext">
+                    <p>¿Quién es el responsable del tratamiento de sus datos personales? </p>
+                </li>
+                <li class="subtext">
+                    <p> ¿Qué datos personales suyos tratamos? </p>
+                </li>
+                <li class="subtext ">
+                    <p> ¿Con qué finalidad tratamos sus datos personales? </p>
+                </li>
+                <li class="subtext ">
+                    <p> ¿Cuánto tiempo conservamos sus datos personales? </p>
+                </li>
+                <li class="subtext ">
+                    <p> ¿Quiénes recibirán sus datos personales? </p>
+                </li>
+                <li class="subtext ">
+                    <p>Cambios en la Política de Privacidad Datos Personales de Menores Derechos ARCO </p>
+                </li>
+            </ol>
+
+            <h3 class="subtext_center ">1. ¿Quién es el responsable del tratamiento de tus datos personales?</h3>
+            <p class="subtext ">El responsable del tratamiento de la página “Norky’s Perú”, que se encuentra en el presente Sitio Web es:</p>
+
+            <h3 class="subtext_center ">2. ¿Qué datos personales suyos tratamos?</h3>
+            <p class="subtext ">Con ocasión de su relación con nosotros, HY, puede tratar las siguientes categorías de datos personales:</p>
+            <p class="subtext ">Datos Identificativos: Nombre y apellidos; DNI; teléfono; correo electrónico.</p>
+            <p class="subtext ">Datos Informáticos: De manera automática, recopilamos determinada información de tu ordenador o dispositivo cuando visitas nuestro Sitio Web. Por ejemplo, recopilaremos la dirección IP, el software del navegador web y el sitio web remitente.
+                También es posible que recopilemos información acerca de tu geolocalización, como el contenido visualizado, el tiempo en el que permaneces en nuestra plataforma.</p>
+            <p class="subtext ">Datos Referidos a la solicitud de un empleo: Si entraste a “Trabaja con Nosotros” se recopilarán datos tales como, nombres y apellidos, documento nacional de identidad, PTP o carné de extranjería, RUC, pasaporte, dirección, teléfono, correo
+                electrónico, imagen, firma, estado civil, edad, fecha de nacimiento, nacionalidad, sexo, datos de derechohabientes; datos de persona de contacto, área y puesto de interés, datos académicos, profesión, idiomas, así como cualquier dato adicional
+                que envíes.</p>
+            <p class="subtext ">Bancos de Datos Personales: Cabe señalar que los datos personales tratados aquí se quedarán almacenados en los siguientes Bancos de Datos Personales denominados: “Clientes”, “Postulantes”.</p>
+            <p class="subtext ">Obligatoriedad de los datos personales: Los datos solicitados a través de la página Web son obligatorios, ya que son necesarios para la prestación de un servicio óptimo al usuario. En caso de que no sean facilitados todos los datos, HY no
+                garantiza que la información y servicios facilitados sean completamente ajustados a sus necesidades.</p>
+            <h3></h3>
+    </div>
+    <!--fin de políticas de privacidad-->
+    <!--comienzo de términos y condiciones-->
+    <div class="Termino-condiciones ">
+        <h1 class="title_pop ">TERMINOS Y CONDICIONES DE PROMOCIONES</h1>
+        <h3 class="subtitulo ">COMBO TAYPÁ</h3>
+        <ul>
+            <li class="subtext "> Promoción: 12 Piezas Broaster + 2 papas familiares + cremas s/45.90</li>
+            <li class="subtext ">Promoción válida para patios de comida Norkys y tiendas seleccionadas.</li>
+            <li class="subtext ">Promoción válida para Lima y Provincia.</li>
+            <li class="subtext ">Promoción válida para recojo en tienda.</li>
+            <li class="subtext ">Promoción válida para delivery con recargo de 3.90 soles.</li>
+            <li class="subtext ">Promoción sujeta a cambios sin previo aviso.</li>
+            <li class="subtext ">Válido del 1 al 30 de Junio 2021.</li>
+            <li class="subtext ">Stock limitado.</li>
+        </ul>
+        <h3 class="subtitulo ">PATIOS DE COMIDA LIMA:</h3>
+        <ul>
+            <li class="subtext ">La Victoria: Prolongación Huánuco 1645 Int.1 Parque Canepa. La Victoria – Lima</li>
+            <li class="subtext ">La Victoria: Prolongacion Huanuco 1645 Int. 8 Parque Canepa.La Victoria – Lima</li>
+            <li class="subtext ">San Juan de Miraflores: Av. Los Lirios 301. 4to Nivel C. Mall del Sur. San Juan De Miraflores – Lima</li>
+            <li class="subtext ">Bellavista: Mariscal Oscar Benavides 3866. 2do Nivel C.C. Mall Aventura Plaza Bellavista. Callao – Lima.</li>
+            <li class="subtext ">La Victoria: Prolongación Huánuco 1645 Int.1 Parque Canepa. La Victoria – LimaPlaza Agustino: Jr. Ancash Nro. 2141 C.C. Parque El Agustino – El Agustino</li>
+            <li class="subtext ">Independencia: Alfredo Mendiola 1400 INT PC03 C.C. Plaza Lima Norte. Independencia – Lima</li>
+            <li class="subtext ">Ate: Nicolás Ayllón 4770 Int 310 A C. C. Real Plaza Puruchuco. Ate – Lima</li>
+            <li class="subtext ">Callao: Av. Canta Callao Nro.378 Canta Callao Open Plaza-Lima</li>
+            <li class="subtext ">Santa Clara: Nicolas Ayllon Nro.8694 Santa Clara Real Plaza – Lima</li>
+            <li class="subtext ">San Juan de Miraflores: Circunvalación Nro. 1803 Int. 07 C.C. Atocongo Open Plaza – Lima</li>
+        </ul>
+        <h3 class="subtitulo ">PATIOS DE COMIDA PROVINCIA:</h3>
+        <ul>
+            <li class="subtext ">Cañete: Mariscal Oscar Benavides 1000 Int. FC1 Urb. Las Palmas Mega Plaza Cañete – San Vicente de Cañete. Delivery : 994 093 154</li>
+            <li class="subtext ">Puno: Los Incas Nro. S/N Int.LC01 Hipermercado Plaza Vea – Puno Delivery : 934 488 269</li>
+            <li class="subtext ">Trujillo: Mansiche Nro. SN Int. L5 C.C Mall Plaza Trujillo. La Libertad – Trujillo – Trujillo</li>
+            <li class="subtext ">Trujillo: Cesar Vallejo Oeste Nro. 1345 Int. PC07 CC Real Plaza. La Libertad – Trujillo. Delivery : 044-577642/959623504</li>
+            <li class="subtext ">Juliaca : Tumbes Nro. S/N Int. R-08 (C.c. Real Plaza Juliaca) San Roman – Juliaca Delivery: www.jamuy.net</li>
+            <li class="subtext ">Piura Open Plaza : Mariscal Cáceres Nro.S/N Int. LC24 Urb. Miraflores II Parte(Centro Comercial Open Plaza) – Piura – Castilla</li>
+            <li class="subtext ">Arequipa Mall: Av. Porongoche Nro. S/N Int.FC04(C.C. Mall Aventura Plaza) – Arequipa – Paucarpata</li>
+        </ul>
+        <h3 class="subtitulo ">TIENDAS SELECCIONADAS EN LIMA:</h3>
+        <ul>
+            <li class="subtext ">Cercado de Lima: de la Union Nro. 748 – Lima</li>
+            <li class="subtext ">Cercado de Lima: de la Union Nro. 416 – Lima</li>
+        </ul>
+    </div>
+    <!--fin de términos y condiciones-->
+    <!--comienzo de mapa-->
+    <div class="mapa "><iframe src="https://www.google.com/maps/d/embed?mid=1sZ0_-x74nl9zlNWZ-ud-TrcYni3l_Se2 " width="100% " height="100% "></iframe></div>
+    <!--fin de mapa-->
+    <!--comienzo de locales-->
+    <div class="Local "><img src="{% static 'img/tablas-scaled.jpg' %} " class="img-pop " alt=" "></div>
+    <!--fin de Locales-->
+</div>
+<!-- Fin de las Ventanas emergentes-->

@@ -1,0 +1,162 @@
+:root {
+    /*Variables de colores*/
+    --color_yellow: rgb(255, 255, 0);
+}
+
+.content {
+    /*Tamaños y posición del contenedor del recuadro amarillo*/
+    top: 0;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#poligon {
+    /*Estilos del recuadro amarillo*/
+    position: absolute;
+    top: -40vh;
+    /*La posición del recuadro es de 40vh 
+    hacia arriba para que no se vea todo el recuadro(mitad)*/
+    width: 70vh;
+    height: 60vh;
+    transform: rotate(30deg);
+    /*Rotación de 30 grados para dar la forma de otra figura*/
+    border-radius: 5px;
+    background: var(--color_yellow);
+    z-index: -100;
+}
+
+.content_plataform {
+    /*Tamaño y posición del contenedor del slider*/
+    position: absolute!important;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 10px solid var(--color_yellow);
+    height: 50%;
+}
+
+.container-img_plataform {
+    /*Contenedor de las imágenes del slider*/
+    position: relative;
+    display: flex;
+    margin: 50px 0px 10px 0px;
+    overflow: hidden;
+}
+
+.img-responsive-plataform {
+    /*Tamaño de las imágenes del slider*/
+    position: relative;
+    width: 100%;
+    transition: all 3s;
+}
+
+.text_menu {
+    /*Estilo de texto(Menú)*/
+    color: var(--color_green);
+    font-size: 30px;
+    font-family: Bernard MT Condensed;
+}
+
+.text_menu:before,
+.text_menu:after {
+    /*Tamaño,color y posición de los rectángulos 
+    a los lados del texto "Menú"*/
+    content: '';
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    width: 25%;
+    height: 10px;
+    background: var(--color_green);
+    margin: 0px 20px;
+}
+
+.container--column {
+    /*contenedor en columnas*/
+    margin-top: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.informacion--menu {
+    /*Estilos del texto(indica la información debajo del menú)*/
+    font-family: Berlin Sans FB Demi;
+    font-size: 70%;
+    font-weight: bold;
+    margin: 0px 20px;
+}
+
+.content_font {
+    /*Contenedor del texto de muestra(Slider)*/
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+
+.pos-center {
+    /*posición del texto de muestra*/
+    margin: 20% 0px 0px 0px;
+}
+
+@media screen and (min-width:480px) {
+    .container--column {
+        /*margen de 45% arriba(contenedor en columna)*/
+        margin-top: 45%;
+    }
+    .informacion--menu {
+        /*Mayor tamaño en el párrafo 
+        debajo del texto de "Menú"*/
+        font-size: 100%;
+    }
+    .text_menu::before,
+    .text_menu::after {
+        /*Mayor tamaño en los rectángulos del texto "Menú"*/
+        width: 30%
+    }
+    .pos-center {
+        /*mayor margen en los textos de muestra*/
+        margin: 30% 0px 0px 0px;
+    }
+}
+
+@media screen and (min-width:780px) {
+    .informacion--menu {
+        /*mayor tamaño del párrafo (debajo de Menú)*/
+        font-size: 150%;
+    }
+    .text_menu::before,
+    .text_menu::after {
+        /*Mayor tamaño en los recuadros del texto "Menú"*/
+        width: 30%
+    }
+    #poligon {
+        /*Cambio de posición y tamaño del cuadro amarillo*/
+        top: -50vh;
+        width: 100vh;
+        height: 100vh;
+    }
+    .pos-center {
+        /*Menor margen al texto de muestra*/
+        margin: 20% 0px 0px 0px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .text_menu {
+        /*Mayor tamaños al texto de "Menú"*/
+        font-size: 10vh;
+    }
+    #poligon {
+        /*Mayor posición y tamaño del recuadro amarillo*/
+        left: 10vh;
+        width: 150vh;
+        height: 100vh;
+    }
+    .container--column {
+        /*contenedor en columna*/
+        margin-top: 40%;
+    }
+}

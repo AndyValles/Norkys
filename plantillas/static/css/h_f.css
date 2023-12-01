@@ -1,0 +1,786 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+/*Importación de tipo de textos*/
+
+@import url("custom.css");
+
+/*Importación de otras hojas de estilo*/
+
+:root {
+    /*Variable de colores*/
+    --color_Norkys: rgb(251, 255, 0);
+    --color-red: rgb(255, 0, 0);
+}
+
+* {
+    /*Todos los elementos iniciaran sin un 
+    margen exterior - interior*/
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    /*Al marcar los elementos
+    Cambiaran su color de fondo y color de texto*/
+    color: rgb(5, 199, 21);
+    background: yellow;
+}
+
+
+/*Código del cursor*/
+
+body::-webkit-scrollbar {
+    /*El scroll web de la pagina tendrá una anchura de 5px*/
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    /*El color del scroll web obtendrá un color 
+    amarillo y sus bordes se redondearán*/
+    background: yellow;
+    border-radius: 5px;
+}
+
+.active {
+    /*Indica que título del menú esta activado(Inicio)*/
+    color: rgb(255, 0, 0)!important;
+    text-decoration: line-through!important;
+}
+
+input {
+    /*Al comenzar los inputs no obtendrán estilos*/
+    border: none;
+    background: none;
+    outline: none;
+}
+
+
+/*comienzo del header*/
+
+.content_menu {
+    /*propiedades del contenedor del header*/
+    position: relative;
+    margin: 15px 20px;
+    z-index: 100;
+}
+
+.mobile-nav {
+    /*navegación solo en móvil*/
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.icon-hamburger {
+    /*tamaño del icono de la hamburguesa*/
+    position: relative;
+    font-size: 200%;
+    transition: all 1s;
+}
+
+.container_menu {
+    /*Contenedor total del menú*/
+    width: 100%;
+    text-align: right;
+}
+
+.img-icon_responsive,
+.img-responsive {
+    /* Estilos de las imágenes de los iconos y  el logo*/
+    position: relative;
+    object-fit: contain;
+    margin-top: -10px;
+}
+
+.img-responsive {
+    /*tamaño del logo*/
+    width: 45%;
+}
+
+.img-icon_responsive {
+    /*Tamaño y posición de la imagen de los iconos */
+    position: relative;
+    width: 8%;
+    top: -9px;
+}
+
+
+/*Sección de búsqueda*/
+
+.content_search {
+    /*Container de la búsqueda*/
+    position: absolute;
+    visibility: hidden;
+    transition: all 2s;
+    overflow: hidden;
+    width: 0%;
+    height: 30vh;
+    text-align: center;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.24);
+    background: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.submit,
+.search {
+    /*botón  y cuadro de búsqueda con tamaño de 6h y 
+    un margen de 10px arriba y abajo*/
+    position: relative;
+    height: 6vh;
+    margin: 10px 0px;
+}
+
+.salir {
+    /*botón de salida de la navegación*/
+    position: absolute;
+    font-size: 200%;
+    top: 0px;
+    right: 0vh;
+    background: none;
+    border: none;
+    transition: all 2s;
+}
+
+.salir:hover {
+    /*Al presionar el botón de salir se cambirá de color y aumentará su tamaño*/
+    color: green;
+    transform: scale(1.2) rotate(360deg);
+}
+
+.submit {
+    /*botones de envió*/
+    width: 5em;
+    color: rgb(255, 255, 255);
+    background: green;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit:active {
+    /*Al presionar un botón este cambiara de color a negro*/
+    background: black;
+}
+
+.search {
+    /*Estilos del input de búsqueda*/
+    outline: none;
+    border: 2px solid rgb(244, 228, 7);
+    border-radius: 20px;
+}
+
+.search::placeholder {
+    /*Color de texto de los textos del input*/
+    color: rgba(0, 116, 0, 0.918);
+}
+
+.text-align {
+    /*texto alineado*/
+    text-align: center;
+}
+
+
+/*comienzo del footer*/
+
+footer {
+    /*Elemento footer con un fondo verde*/
+    background: rgba(27, 117, 4, 0.993);
+}
+
+.container--50,
+.container--70 {
+    /*Contenedores de filas*/
+    display: flex;
+}
+
+.container--70 {
+    /*contenedor en filas con tamaño de 70%*/
+    width: 70%;
+}
+
+.container--50 {
+    /*contenedor de fila con tamaño de 50%*/
+    width: 50%;
+}
+
+.container--70,
+.container {
+    /*contenedor de filas*/
+    height: auto;
+    display: flex;
+}
+
+.row {
+    /*fila con un margen de 5px derecha izquierda(compartida)*/
+    margin: 0px 5px;
+}
+
+.container,
+.row {
+    /*contenedor de fila y fila con tamaño de 100%*/
+    position: relative;
+    width: 100%;
+}
+
+.img_social {
+    /*Tamaño de las imágenes de las redes sociales*/
+    width: 30%;
+}
+
+.subtitulo {
+    /*Tamaño de los subtítulos de footer*/
+    font-size: 80%;
+    transition: all 0.1s;
+}
+
+.titulos {
+    /*Tamaño de los títulos del footer*/
+    font-size: 90%;
+}
+
+.Logo-footer {
+    /*Tamaño de los logos del footer*/
+    width: 70%;
+}
+
+.subtitulo:active {
+    /*Al presionar los subtítulos cambiaran de color*/
+    color: var(--color-red);
+    transform: scaleY(-1);
+}
+
+
+/*fin del footer*/
+
+
+/*fin sección de búsqueda*/
+
+.menu {
+    /*Lista de menú*/
+    position: absolute;
+    border-top: 3px solid var(--color_Norkys);
+    border-bottom: 3px solid var(--color_Norkys);
+    text-align: center;
+    width: 100%;
+    height: 0vh;
+    background: rgb(255, 254, 254);
+}
+
+.menu_row,
+.entrada_menu {
+    /*Estilos de texto de las opciones 
+    del menú y títulos de las opciones del menú*/
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+.menu_row {
+    /*margen interior para las opciones de la lista del menú*/
+    padding: 10px 0px;
+}
+
+.entrada_menu,
+.referece {
+    /*Tamaño de texto y color para los 
+    título y texto de referencia(a)*/
+    font-size: 20px;
+    transition: all 0.2s;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+.referece:hover {
+    /*Al pasar el mouse por un texto 
+    de referencia(footer) Este cambiara de tamaño y de color*/
+    font-size: 30px;
+    color: var(--color_Norkys);
+}
+
+.entrada_menu {
+    /*Títulos de las opciones(botones)*/
+    border: none;
+    background: white;
+}
+
+.entrada_menu:hover {
+    /*Al pasar el mouse por el título de las opciones 
+    estas aumentaran de tamaño y cambiaran de color*/
+    transform: scale(1.1);
+    color: var(--color_Norkys);
+}
+
+.content_submenu {
+    /*Estilos del contenedor de las Sub opciones del menú*/
+    height: 0px;
+    margin: 3px 0px;
+    transition: all 2s;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.submenu {
+    /*Estilos de las sub opciones del menú*/
+    background: white;
+    padding: 5px 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.submenu:hover {
+    /*Al pasar el mouse de las sub opciones del menú 
+    estas cambiaran de color y se visualizará un borde abajo del texto */
+    border-bottom: 2px solid var(--color_Norkys);
+    color: var(--color_Norkys);
+}
+
+.submenu:active {
+    /*Al presionar las sub opciones 
+    estas cambiaran de color*/
+    color: green;
+    border-bottom: 2px solid green;
+}
+
+.content_sub {
+    position: absolute;
+    text-align: center;
+}
+
+.btn-icon {
+    /*Estilos para el botón de corazón(Index)*/
+    position: relative;
+    margin: 8px 5px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+}
+
+.btn-text {
+    /*Botón sin fondo ni borde*/
+    border: none;
+    background: none;
+}
+
+.btn--user {
+    background: blue;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+.btn--user:active {
+    background: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.btn-active {
+    text-decoration: line-through;
+    color: rgb(255, 187, 0);
+}
+
+.category-section_btn {
+    background: white;
+    width: 6%;
+    height: 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.category-section_btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+}
+
+.category-section_btn:active {
+    background: black;
+    color: white;
+}
+
+.btn-inter {
+    background: white;
+    border: none;
+    padding: 1% 5% 1% 5%;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.btn-inter:active {
+    background: black;
+    color: white;
+}
+
+
+/*img responsive absolute*/
+
+.img-responsive_absolute {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+}
+
+.img_fondo {
+    /*Fondo de los botones del slider(index)*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    box-shadow: 2px 10px 10px black;
+}
+
+.principal-cat {
+    /*contenedor de principales categorías(Index)*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+.principal-cat_item_4,
+.principal-cat_item_3,
+.principal-cat_item_2,
+.principal-cat_item_1 {
+    /*Ítems de las categorías(Index)*/
+    width: 100%;
+    height: 8vh;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.principal-cat_item_1 {
+    background: rgb(255, 209, 122);
+}
+
+.principal-cat_item_2 {
+    background: rgb(0, 0, 0);
+}
+
+.principal-cat_item_3 {
+    background: rgb(165, 118, 31);
+}
+
+.principal-cat_item_4 {
+    background: rgb(255, 0, 0);
+}
+
+
+/*fonts-sizes(Tamaño de los textos )*/
+
+.font-medium_float,
+.font-little_float,
+.font-precio:before {
+    float: left;
+}
+
+.font-medium_float {
+    /*texto  mediano flotante */
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.font-precio {
+    /*texto del precio(Index)*/
+    font-size: 200%;
+    float: center;
+}
+
+.font-precio:before {
+    /*Antes del texto se agrega "S/" para representar el 
+    dinero con tamaño de 50%*/
+    content: "S/";
+    font-size: 50%;
+}
+
+.font-medium {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.font-little--30,
+.font-little {
+    /*texto pequeño*/
+    font-size: 90%;
+}
+
+.font-little--30 {
+    /*texto pequeño con margen 30px*/
+    margin: 0px 30px;
+}
+
+.text-cat {
+    /*texto de utilizado en las categorías*/
+    margin: 10px 10px 0px 60%;
+    text-align: right;
+}
+
+.user--title_font {
+    /*texto de los títulos*/
+    text-align: center;
+    font-size: 26px;
+    font-family: Calibri;
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+
+
+/*contenedores*/
+
+.cuadro_info-container {
+    /*Contenedores de información de productos*/
+    background: #fff;
+    width: 100%;
+    margin: 10px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0);
+    text-align: center;
+}
+
+.cuadro_img {
+    /*imagen de los cuadros de información del producto*/
+    transition: all 2s;
+    width: 100%;
+}
+
+.overflow_hidden {
+    /*Los elementos que sobrepasen al contenedor no son visibles*/
+    overflow: hidden;
+}
+
+.cuadro_info {
+    /*Información del cuadro de información del producto*/
+    margin: 0px 20px;
+}
+
+.row_no-responsive {
+    /**/
+    margin: 0px 20%;
+}
+
+.container_grid-2 {
+    /*Contenedor de 2 filas con tamaño de 40%*/
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 40%);
+    column-gap: 5%;
+}
+
+.titulo_20 {
+    /*Espaciado para los Títulos*/
+    margin: 20px 10px;
+}
+
+.content_top-20 {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+    margin: 20px;
+    width: 70%;
+    padding: 40px;
+}
+
+
+/* class de funciones*/
+
+.icon-hamburger_back {
+    transform: rotate(360deg);
+    color: var(--color_Norkys);
+}
+
+.submenu-activate,
+.menu_start {
+    /*El menú(celular) y las sub opciones se visualizarán*/
+    visibility: visible;
+    transition: all 3s;
+}
+
+.menu_start {
+    /*El menú(celular) se estirará*/
+    height: 81vh;
+}
+
+.submenu-activate {
+    /*Las sub obciones se estirarán*/
+    height: 120px;
+}
+
+.contenido_search {
+    /*visualizará al cuadro de búsqueda*/
+    visibility: visible;
+    width: 100%;
+}
+
+.visible-modal {
+    /*Las ventanas emergentes se visualizarán*/
+    visibility: visible!important;
+}
+
+@media screen and (min-width:480px) {
+    .titulos {
+        /*Los títulos cambiarán de tamaño*/
+        font-size: 120%;
+    }
+    .subtitulo {
+        font-size: 100%;
+    }
+    .icon-hamburger {
+        /*El icono de la hamburguesa cambiara de tamaño(celular)*/
+        font-size: 250%;
+    }
+    .img-icon_responsive {
+        width: 8%;
+        margin: 0 3px;
+        top: -20px;
+    }
+    /*animación cambio de color*/
+    .icon-hamburger_back {
+        color: rgb(38, 112, 3);
+    }
+    .content_search {
+        height: 15vh;
+    }
+    .search {
+        width: 70%;
+    }
+    .category-section_btn {
+        width: 6%;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width:780px) {
+    .subtitulo {
+        font-size: 110%;
+    }
+    .icon-hamburger {
+        font-size: 300%;
+    }
+    .img-responsive {
+        position: relative;
+        right: 40vh;
+        width: 25%;
+    }
+    .img-icon_responsive {
+        width: 4%;
+        margin: 0 3px;
+    }
+    .hover-items:hover {
+        /*Al pasar el mouse por los ítems 
+        del footer se visualizará un borde izquierdo rojo y cambira su tamaño*/
+        border-left: 5px solid red;
+        background: rgba(5, 5, 5, 0.384);
+        transform: scaleY(1.1);
+    }
+    /*font zise*/
+    .font-medium_float {
+        font-size: 500%;
+    }
+    .font-precio {
+        font-size: 300%;
+    }
+    .font-medium {
+        font-size: 200%;
+    }
+    .font-little--30,
+    .font-little {
+        font-size: 150%;
+    }
+    .user--title_font {
+        /*se utiliza en los títulos de usuario y tarjeta*/
+        font-size: 260%;
+        margin: 0px 0px 5px 0px;
+    }
+    /*contenedores*/
+    .container_grid-2 {
+        grid-template-columns: repeat(4, 20%);
+        column-gap: 1%;
+    }
+    .category-section_btn {
+        width: 3%;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .subtitulo {
+        font-size: 150%;
+    }
+    .mobile-nav {
+        /*LA navegación de celular se ocultará*/
+        display: none;
+    }
+    .img-responsive {
+        right: 30vh;
+    }
+    .img-icon_responsive {
+        width: 3%;
+        margin: 0 20px;
+    }
+    .menu {
+        /*El menú sera visible y sus elementos se ordenerán en filas*/
+        position: absolute;
+        visibility: visible;
+        border: none;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap nowrap;
+        overflow: visible;
+        background: none;
+        top: 5vh;
+    }
+    .img_social:hover {
+        /*Al pasar el mouse por las Redes sociales estas cambiarán de tamaño*/
+        transform: scale(1.2);
+    }
+    .menu_row {
+        position: relative;
+        margin: 0px 35px;
+    }
+    .referece:hover {
+        font-size: 20px;
+        border-bottom: 3px solid var(--color_Norkys);
+        color: var(--color_Norkys);
+    }
+    .entrada_menu {
+        background: none;
+    }
+    .menu_row:hover .content_submenu {
+        visibility: visible;
+        transition: all 1s;
+        height: 120px;
+    }
+    .submenu-activate {
+        height: 0;
+    }
+    .content_search {
+        height: 30vh;
+        border-radius: 5px;
+    }
+    /*font zise*/
+    .font-medium_float {
+        font-size: 600%;
+    }
+    .font-precio {
+        font-size: 400%;
+    }
+    .font-medium {
+        font-size: 300%;
+    }
+    .font-little--20,
+    .font-little {
+        font-size: 200%;
+    }
+    .container_no-responsive {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .row_no-responsive {
+        margin: 0px 0px;
+        width: 30%;
+    }
+    .category-section_btn {
+        height: 40px;
+    }
+}
